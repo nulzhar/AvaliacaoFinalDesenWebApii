@@ -1,0 +1,24 @@
+
+
+<form *ngIf="!isAuthenticated" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <h1>Realize o Login para obter o token</h1>
+  <div>
+    <label for="nomeUsuario">
+      Name
+    </label>
+    <input id="nomeUsuario" type="text" formControlName="nomeUsuario">
+  </div>
+
+  <div>
+    <label for="senha">
+      Address
+    </label>
+    <input id="senha" type="password" formControlName="senha">
+  </div>
+
+  <button class="button" type="submit">Login</button>
+
+</form>
+<div *ngIf="isAuthenticated">
+  <h2>Bem vindo {{nomeUsuario}}!</h2>
+</div>

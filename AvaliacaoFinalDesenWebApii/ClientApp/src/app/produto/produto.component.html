@@ -1,0 +1,30 @@
+<form [formGroup]="produtoForm" (ngSubmit)="onSubmit()">
+  
+  <div class="row">
+    <div class="col-sm-2">
+      <input formControlName="idProduto" id="idProduto" class="form-control" type="text" value="ID Produto" aria-label="ID Produto" readonly>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <input formControlName="nomeProduto" id="nomeProduto" class="form-control" type="text" value="Nome do Produto" aria-label="Nome do Produto">
+    </div>
+    <div class="col-sm-4">
+      <input formControlName="categoria" id="categoria" class="form-control" type="text" value="Categoria" aria-label="Categoria">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <input formControlName="quantidadeEstoque" id="quantidadeEstoque" class="form-control" type="number" min="0" max="10000" step="1" aria-label="Quantidade em Estoque">
+    </div>
+    <div class="col-sm-4">
+      <input formControlName="precoVenda" id="precoVenda" class="form-control" type="number" min="0.00" max="10000.00" step="0.01" aria-label="Preço de Venda">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit">Cadastrar</button>
+  </div>
+</form>

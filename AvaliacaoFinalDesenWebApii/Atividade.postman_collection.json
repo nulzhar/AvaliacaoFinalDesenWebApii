@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "913fedc4-80a7-455a-bc15-f7df06c86898",
+		"name": "Atividade",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Produto Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDA3MDgwNzQsImlzcyI6Iklzc3VlclRlc3RlIiwiYXVkIjoiQXVkaWVuY2VUZXN0ZSJ9.nQMfMVdI3WLgtNii4pfMBmomGdKvrdbIQde4nOpYHLE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"IdProduto\": 0, \"NomeProduto\": \"Nome do Produto Postman\", \"Categoria\": \"Categoria\", \"PrecoVenda\": 0, \"QuantidadeEstoque\": 0}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44376/api/produto",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44376",
+					"path": [
+						"api",
+						"produto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NomeUsuario\": \"filipe\",\r\n    \"Senha\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44376/api/auth",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44376",
+					"path": [
+						"api",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDA3MDgzMzEsImlzcyI6Iklzc3VlclRlc3RlIiwiYXVkIjoiQXVkaWVuY2VUZXN0ZSJ9.dwOdhFZkgOCFpQrJr6GxE7nNTLWlSD1-CER_iYed1SE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NomeUsuario\": \"teste\",\r\n    \"Senha\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44376/api/usuario",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44376",
+					"path": [
+						"api",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
